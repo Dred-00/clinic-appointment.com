@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> User </title>
+    <link rel="stylesheet" href="stylees.css">
+    <script src="https://kit.fontawesome.com/244d468570.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="fa-solid fa-list"></i>
+                </a>
+                <a onclick="tabs(2)" class="tab">
+                    <i class="fa-solid fa-sliders"></i>
+                </a>
+                
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="appointment tabShow">
+                <h1>Appointments</h1>
+                <h2>First Name</h2>
+                <input type="text" class="input">
+                <h2>Middle Name</h2>
+                <input type="text" class="input">
+                <h2>Last Name</h2>
+                <input type="text" class="input">
+                <h2>Age</h2>
+                <input type="number" class="input">
+                <h2>Gender</h2>
+                <select name="gender" class="app">
+                    <option value="m">Male</option name="gender">
+                    <option value="f">Female</option name="gender">
+                    <option value="o">Others</option name="gender">
+                  </select>
+                <h2>Date of Birth</h2>
+                <input type="date" class="input">
+                
+            </div>
+            <div class="students tabShow">
+                <h1>Student List</h1>
+                <h2>Id Number</h2>
+                <input type="text" class="input">
+                <h2>Course</h2>
+                <input type="text" class="input">
+                <h2>Year/Block</h2>
+                <input type="text" class="input">
+                <h2>Weight</h2>
+                <input type="text" class="input">
+                <h2>Height</h2>
+                <input type="text" class="input">
+                <h2>BP</h2>
+                <input type="text" class="input">
+                
+        </div>
+        <div class="account tabShow">
+            <h1>Account Setting</h1>
+            <h2>User ID</h2>
+            <input type="text" class="input">
+            <h2>Email</h2>
+            <input type="email" class="input">
+            <h2>Password</h2>
+            <input type="password" class="input">
+            <h2>Confirm Password</h2>
+            <input type="password" class="input">
+            <button class="btn">Update</button>
+        </div>
+        
+<script>
+    const tabBtn = document.querySelectorAll(".tab")
+    const tab = document.querySelectorAll(".tabShow")
+
+
+    function tabs(panelIndex){
+        tab.forEach(function(node){
+            node.style.display = "none";
+        });
+        tab[panelIndex].style.display = "block";
+    }
+    tabs(0);
+</script>
+<script>
+    $(".tab").click(function(){
+        $(this).addClass("active").siblings().removeClass("active")
+    })
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
